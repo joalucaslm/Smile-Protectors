@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bls07ha743o5b"
-path="res://.godot/imported/UndergroundBlock.png-62361aedf63b8b1eba5a6ce04f5d7a52.ctex"
+uid="uid://wcdgp8eo3idd"
+path="res://.godot/imported/sofa lado.png-09bfe51e84f1e6e6179d6777b80b84fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets Smile Protectors/UndergroundBlock.png"
-dest_files=["res://.godot/imported/UndergroundBlock.png-62361aedf63b8b1eba5a6ce04f5d7a52.ctex"]
+source_file="res://Assets Smile Protectors/Interior de Casa/assests 0/sofa lado.png"
+dest_files=["res://.godot/imported/sofa lado.png-09bfe51e84f1e6e6179d6777b80b84fe.ctex"]
 
 [params]
 

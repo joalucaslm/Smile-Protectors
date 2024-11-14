@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pdkub7lr46ur"
-path="res://.godot/imported/super_molar_idle.webp-24f5261a3e4832b8d7b28bdefef18336.ctex"
+uid="uid://u277xjg5aj4g"
+path="res://.godot/imported/cadeira frente.png-68d6d7586bfcf11ce93b34fc3a886e16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets Smile Protectors/super_molar_idle.webp"
-dest_files=["res://.godot/imported/super_molar_idle.webp-24f5261a3e4832b8d7b28bdefef18336.ctex"]
+source_file="res://Assets Smile Protectors/Interior de Casa/assests 0/cadeira frente.png"
+dest_files=["res://.godot/imported/cadeira frente.png-68d6d7586bfcf11ce93b34fc3a886e16.ctex"]
 
 [params]
 
