@@ -1,0 +1,200 @@
+[gd_scene load_steps=28 format=3 uid="uid://cpv13d676l83a"]
+
+[ext_resource type="Script" path="res://Cenas/jogador_1.gd" id="1_p2epw"]
+[ext_resource type="Texture2D" uid="uid://daxxcbs5wpn4r" path="res://protagonista/CD andando 1.png" id="1_rwgvx"]
+[ext_resource type="Texture2D" uid="uid://bcckd0ig0i1ud" path="res://protagonista/CD andando 2.png" id="2_inud7"]
+[ext_resource type="Texture2D" uid="uid://bdih4rporlapx" path="res://protagonista/CD idle.png" id="3_oq3ay"]
+[ext_resource type="Texture2D" uid="uid://nielby7i2v72" path="res://protagonista/CE andando 1.png" id="4_iy6j1"]
+[ext_resource type="Texture2D" uid="uid://2gr5fluvgmho" path="res://protagonista/CE andando 2.png" id="5_amp5u"]
+[ext_resource type="Texture2D" uid="uid://sbs7g61wgcu0" path="res://protagonista/CE idle.png" id="6_b418r"]
+[ext_resource type="Texture2D" uid="uid://dpi11wje83t43" path="res://protagonista/CIMA andando 1.png" id="7_xhufi"]
+[ext_resource type="Texture2D" uid="uid://bqwis11rg047p" path="res://protagonista/CIMA andando 2.png" id="8_j63m3"]
+[ext_resource type="Texture2D" uid="uid://bct0sob7tdx1s" path="res://protagonista/CIMA idle.png" id="9_pxckd"]
+[ext_resource type="Texture2D" uid="uid://sc7lak8oy2wl" path="res://protagonista/DIREITA andando 1.png" id="10_2qsuk"]
+[ext_resource type="Texture2D" uid="uid://xwrre4qq2vu4" path="res://protagonista/DIREITA andando 2.png" id="11_b7pma"]
+[ext_resource type="Texture2D" uid="uid://hbw2y4hylejn" path="res://protagonista/DIREITA idle.png" id="12_qojca"]
+[ext_resource type="Texture2D" uid="uid://delwimjyjg5as" path="res://protagonista/ESQUERDA andando 1.png" id="13_giu0y"]
+[ext_resource type="Texture2D" uid="uid://b1hwu50873ak5" path="res://protagonista/ESQUERDA andando 2.png" id="14_r8ouh"]
+[ext_resource type="Texture2D" uid="uid://dcpv1xp1okjjx" path="res://protagonista/ESQUERDA idle.png" id="15_jqah4"]
+[ext_resource type="Texture2D" uid="uid://cj8kb6yqxxbpg" path="res://protagonista/FD andando 1.png" id="16_0hjda"]
+[ext_resource type="Texture2D" uid="uid://c0bjvwjya1p61" path="res://protagonista/FD andando 2.png" id="17_owos6"]
+[ext_resource type="Texture2D" uid="uid://bttu2fqpkar3" path="res://protagonista/FD idle.png" id="18_fyk78"]
+[ext_resource type="Texture2D" uid="uid://b851wwp5r70vi" path="res://protagonista/FE andando 1.png" id="19_1ljiv"]
+[ext_resource type="Texture2D" uid="uid://dt1yg7f8kytms" path="res://protagonista/FE andando 2.png" id="20_myvhs"]
+[ext_resource type="Texture2D" uid="uid://msh2c2j0ur0t" path="res://protagonista/FE idle.png" id="21_2um8f"]
+[ext_resource type="Texture2D" uid="uid://qka87icbjld" path="res://protagonista/FRENTE andando 1.png" id="22_4m4ru"]
+[ext_resource type="Texture2D" uid="uid://cdhrossku1xrm" path="res://protagonista/FRENTE andando 2.png" id="23_rq3t3"]
+[ext_resource type="Texture2D" uid="uid://ywdpya3gb03l" path="res://protagonista/FRENTE idle.png" id="24_c0eog"]
+[ext_resource type="Shape2D" uid="uid://bcoh2e4etic3t" path="res://Resources/CollisionShapes/jogador1.tres" id="25_yaxg5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kjmr1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rwgvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_inud7")
+}],
+"loop": true,
+"name": &"cimaDireita_andando",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_oq3ay")
+}],
+"loop": true,
+"name": &"cimaDireita_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_iy6j1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_amp5u")
+}],
+"loop": true,
+"name": &"cimaEsquerda_andando",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_b418r")
+}],
+"loop": true,
+"name": &"cimaEsquerda_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_xhufi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j63m3")
+}],
+"loop": true,
+"name": &"cima_andando",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_pxckd")
+}],
+"loop": true,
+"name": &"cima_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_2qsuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_b7pma")
+}],
+"loop": true,
+"name": &"direita_andando",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_qojca")
+}],
+"loop": true,
+"name": &"direita_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_giu0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_r8ouh")
+}],
+"loop": true,
+"name": &"esquerda_andando",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_jqah4")
+}],
+"loop": true,
+"name": &"esquerda_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_0hjda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_owos6")
+}],
+"loop": true,
+"name": &"frenteDireita_andando",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_fyk78")
+}],
+"loop": true,
+"name": &"frenteDireita_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_1ljiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_myvhs")
+}],
+"loop": true,
+"name": &"frenteEsquerda_andando",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_2um8f")
+}],
+"loop": true,
+"name": &"frenteEsquerda_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_4m4ru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_rq3t3")
+}],
+"loop": true,
+"name": &"frente_andando",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_c0eog")
+}],
+"loop": true,
+"name": &"frente_idle",
+"speed": 5.0
+}]
+
+[node name="jogador_1" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_p2epw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_kjmr1")
+animation = &"frente_idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = ExtResource("25_yaxg5")
+
+[node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("25_yaxg5")

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1vnovhjirbgh"]
+
+[ext_resource type="Texture2D" uid="uid://dy3gflh8vcnm2" path="res://Assets Smile Protectors/projetil fireball/FB00_nyknck/FB001.png" id="1_f6762"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tbr0l"]
+radius = 9.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ui571"]
+a = Vector2(10, 1)
+b = Vector2(-9, 4)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4hsft"]
+a = Vector2(11, 5)
+b = Vector2(-7, 3)
+
+[node name="fireball" type="Area2D"]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_f6762")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, -2)
+shape = SubResource("CircleShape2D_tbr0l")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -9)
+shape = SubResource("SegmentShape2D_ui571")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_4hsft")
