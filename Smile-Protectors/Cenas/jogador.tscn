@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://cpv13d676l83a"]
 
-[ext_resource type="Script" path="res://Cenas/jogador_1.gd" id="1_p2epw"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_k75nl"]
 [ext_resource type="Texture2D" uid="uid://daxxcbs5wpn4r" path="res://protagonista/CD andando 1.png" id="1_rwgvx"]
 [ext_resource type="Texture2D" uid="uid://bcckd0ig0i1ud" path="res://protagonista/CD andando 2.png" id="2_inud7"]
 [ext_resource type="Texture2D" uid="uid://bdih4rporlapx" path="res://protagonista/CD idle.png" id="3_oq3ay"]
@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://qka87icbjld" path="res://protagonista/FRENTE andando 1.png" id="22_4m4ru"]
 [ext_resource type="Texture2D" uid="uid://cdhrossku1xrm" path="res://protagonista/FRENTE andando 2.png" id="23_rq3t3"]
 [ext_resource type="Texture2D" uid="uid://ywdpya3gb03l" path="res://protagonista/FRENTE idle.png" id="24_c0eog"]
-[ext_resource type="Shape2D" uid="uid://bcoh2e4etic3t" path="res://Resources/CollisionShapes/jogador1.tres" id="25_yaxg5"]
+[ext_resource type="Shape2D" uid="uid://bcoh2e4etic3t" path="res://Resources/CollisionShapes/jogador1.tres" id="26_0453b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kjmr1"]
 animations = [{
@@ -184,7 +184,7 @@ animations = [{
 
 [node name="jogador_1" type="CharacterBody2D"]
 collision_mask = 2
-script = ExtResource("1_p2epw")
+script = ExtResource("1_k75nl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -6)
@@ -194,7 +194,7 @@ animation = &"frente_idle"
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = ExtResource("25_yaxg5")
+shape = ExtResource("26_0453b")
 
 [node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
-shape = ExtResource("25_yaxg5")
+shape = ExtResource("26_0453b")

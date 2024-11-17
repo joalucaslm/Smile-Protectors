@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://psehl36jklm1"]
+[gd_scene load_steps=52 format=3 uid="uid://psehl36jklm1"]
 
 [ext_resource type="Texture2D" uid="uid://cj441rs44xlag" path="res://Assets Smile Protectors/Interior de Casa/assests 0/chao 1.png" id="1_r4ju8"]
 [ext_resource type="Texture2D" uid="uid://c163248hfup1s" path="res://Assets Smile Protectors/Interior de Casa/assests 0/chao escuro.png" id="2_ve2eu"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://di7sm7tp3cmnk" path="res://Assets Smile Protectors/Interior de Casa/assests 0/copo vazio.png" id="18_0ile3"]
 [ext_resource type="Texture2D" uid="uid://cfif1a2x63m7r" path="res://Assets Smile Protectors/Interior de Casa/assests 0/cadeira1Tras.png" id="19_uu4pk"]
 [ext_resource type="Texture2D" uid="uid://ca8ruhwmgtx7o" path="res://Assets Smile Protectors/Interior de Casa/assests 0/churrasqueiraa.png" id="20_ojml3"]
+[ext_resource type="PackedScene" uid="uid://cpv13d676l83a" path="res://Cenas/jogador.tscn" id="21_msd3h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2o6g"]
 size = Vector2(605, 390)
@@ -627,3 +628,12 @@ shape = SubResource("RectangleShape2D_aeq0w")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="churrasqueira"]
 position = Vector2(-189, -36)
 shape = SubResource("SegmentShape2D_nyfon")
+
+[node name="jogador_1" parent="." instance=ExtResource("21_msd3h")]
+position = Vector2(-96, -31)
+collision_mask = 1
+_move_speed = 100.0
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="jogador_1"]
+zoom = Vector2(2.5, 2.5)
