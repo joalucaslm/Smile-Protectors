@@ -1,7 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://nxrhnuwplux2"]
+[gd_scene load_steps=5 format=3 uid="uid://nxrhnuwplux2"]
 
 [ext_resource type="PackedScene" uid="uid://c67dimnt6rau3" path="res://Cenas/cafe_da_manha.tscn" id="1_nw4w2"]
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_wqgfv"]
+[ext_resource type="PackedScene" uid="uid://0yn3kebyvmuc" path="res://Cenas/carie.tscn" id="2_e8by7"]
+
+[sub_resource type="Curve2D" id="Curve2D_1e022"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -171, -110, 0, 0, 0, 0, 194, -113, 0, 0, 0, 0, 194, 121, 0, 0, 0, 0, -172, 119)
+}
+point_count = 4
 
 [node name="Main" type="Node"]
+script = ExtResource("1_wqgfv")
 
 [node name="cafeDaManha" parent="." instance=ExtResource("1_nw4w2")]
+
+[node name="carie" parent="." instance=ExtResource("2_e8by7")]
+position = Vector2(-94.92, -16.6233)
+
+[node name="carie2" parent="." instance=ExtResource("2_e8by7")]
+position = Vector2(-97.9166, 8.84795)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_1e022")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+unique_name_in_owner = true
+position = Vector2(-171, -110)
+rotation = -0.00821899
+scale = Vector2(1, 1)
