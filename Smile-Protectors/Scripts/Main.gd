@@ -2,14 +2,15 @@ extends Node
 
 func _ready():
 	spawn_mob()
-	spawn_mob()
-	spawn_mob()
-	spawn_mob()
 	
 
 func spawn_mob():
-	var CARIE = preload("res://Cenas/carie.tscn").instantiate()
+	var new_mob = preload("res://Cenas/carie.tscn").instantiate()
 	%PathFollow2D.progress_ratio = randf()
-	CARIE.global_position = %PathFollow2D.global_position
-	add_child(CARIE)
+	new_mob.global_position = %PathFollow2D.global_position
+	add_child(new_mob)
 
+
+
+func _on_timer_timeout():
+	spawn_mob()

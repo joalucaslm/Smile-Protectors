@@ -300,6 +300,12 @@ size = Vector2(14, 20)
 position = Vector2(93, 29)
 collision_layer = 2
 
+[node name="player" parent="." instance=ExtResource("33_x41sk")]
+collision_mask = 3
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(3.5, 3.5)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = -1
 position = Vector2(-102.5, -35.5)
@@ -695,12 +701,3 @@ texture = ExtResource("32_dryt7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cadeiraCosta"]
 position = Vector2(59, 16)
 shape = SubResource("RectangleShape2D_4vcww")
-
-[node name="player" parent="." instance=ExtResource("33_x41sk")]
-position = Vector2(-68, -33)
-collision_mask = 1
-_move_speed = 64.0
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-zoom = Vector2(3.5, 3.5)
-metadata/_edit_group_ = true

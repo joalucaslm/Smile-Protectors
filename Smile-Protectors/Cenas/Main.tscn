@@ -6,7 +6,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_1e022"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -171, -110, 0, 0, 0, 0, 194, -113, 0, 0, 0, 0, 194, 121, 0, 0, 0, 0, -172, 119)
+"points": PackedVector2Array(0, 0, 0, 0, -155.988, -32.2021, 0, 0, 0, 0, 168.838, -34.5959, 0, 0, 0, 0, 194, 121, 0, 0, 0, 0, -153.7, 124.591)
 }
 point_count = 4
 
@@ -22,10 +22,17 @@ position = Vector2(-94.92, -16.6233)
 position = Vector2(-97.9166, 8.84795)
 
 [node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-21.6175, -18.0952)
+scale = Vector2(0.874317, 0.835498)
 curve = SubResource("Curve2D_1e022")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 unique_name_in_owner = true
-position = Vector2(-171, -110)
-rotation = -0.00821899
-scale = Vector2(1, 1)
+position = Vector2(-155.988, -32.2021)
+rotation = -0.00736936
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

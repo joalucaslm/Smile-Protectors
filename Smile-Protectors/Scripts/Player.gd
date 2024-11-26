@@ -13,7 +13,13 @@ func _physics_process(_delta: float) -> void:
 	_move()
 	move_and_slide()
 	
-	
+	const DAMAGE_RATE = 20.0
+	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
+	if overlapping_mobs.size() > 0:
+		health -= DAMAGE_RATE * overlapping_mobs.size() * _delta
+		%ProgressBar.value = health
+		if health <= 0.0:
+			health_depleted.emit()
 	
 func _move() -> void:
 	var _direction: Vector2 = Vector2(
@@ -30,10 +36,4 @@ func _move() -> void:
 	velocity.y =lerp(velocity.y, _direction.normalized().y * _move_speed, _friction)
 	velocity = _direction.normalized() * _move_speed
 	
-	const DAMAGE_RATE = 500.0
-	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
-	if overlapping_mobs.size() > 0:
-		health -= DAMAGE_RATE * overlapping_mobs.size() #delta aqui
-		%ProgressBar.value = health
-		if health <= 0.0:
-			health_depleted.emit()
+	
