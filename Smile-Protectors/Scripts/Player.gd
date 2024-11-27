@@ -37,3 +37,7 @@ func _move() -> void:
 	velocity = _direction.normalized() * _move_speed
 	
 	
+
+func _die():
+	if health == 0:
+		get_tree().change_scene_to_file("res://Cenas/perdeu.tscn")

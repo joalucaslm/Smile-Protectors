@@ -24,8 +24,8 @@ theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("2_25wrh")
 theme_override_font_sizes/font_size = 90
 text = "que pena, as caries
-te derrotaram e
-voce perdeu o jogo."
+te derrotaram,
+Tente novamente!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -88,3 +88,6 @@ texture = ExtResource("3_2g3nw")
 [node name="Sprite2D" type="Sprite2D" parent="SlimeSaudavel10"]
 position = Vector2(261, 455)
 texture = ExtResource("3_2g3nw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 328)

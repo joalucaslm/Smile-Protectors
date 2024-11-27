@@ -1,38 +1,51 @@
-[gd_scene load_steps=5 format=3 uid="uid://nxrhnuwplux2"]
+[gd_scene load_steps=4 format=3 uid="uid://nxrhnuwplux2"]
 
 [ext_resource type="PackedScene" uid="uid://c67dimnt6rau3" path="res://Cenas/cafe_da_manha.tscn" id="1_nw4w2"]
-[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_wqgfv"]
-[ext_resource type="PackedScene" uid="uid://0yn3kebyvmuc" path="res://Cenas/carie.tscn" id="2_e8by7"]
-
-[sub_resource type="Curve2D" id="Curve2D_1e022"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -155.988, -32.2021, 0, 0, 0, 0, 168.838, -34.5959, 0, 0, 0, 0, 194, 121, 0, 0, 0, 0, -153.7, 124.591)
-}
-point_count = 4
+[ext_resource type="Script" path="res://Scripts/Hud_manager.gd" id="4_5gm1l"]
+[ext_resource type="FontFile" uid="uid://bmnlj3amdmi2x" path="res://Hi Jack.otf" id="5_xrtte"]
 
 [node name="Main" type="Node"]
-script = ExtResource("1_wqgfv")
 
 [node name="cafeDaManha" parent="." instance=ExtResource("1_nw4w2")]
+position = Vector2(81, 17)
 
-[node name="carie" parent="." instance=ExtResource("2_e8by7")]
-position = Vector2(-94.92, -16.6233)
+[node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="carie2" parent="." instance=ExtResource("2_e8by7")]
-position = Vector2(-97.9166, 8.84795)
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_5gm1l")
 
-[node name="Path2D" type="Path2D" parent="."]
-position = Vector2(-21.6175, -18.0952)
-scale = Vector2(0.874317, 0.835498)
-curve = SubResource("Curve2D_1e022")
+[node name="container" type="MarginContainer" parent="HUD/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-unique_name_in_owner = true
-position = Vector2(-155.988, -32.2021)
-rotation = -0.00736936
+[node name="score_container" type="HBoxContainer" parent="HUD/Control/container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
-autostart = true
+[node name="score_label" type="Label" parent="HUD/Control/container/score_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_xrtte")
+theme_override_font_sizes/font_size = 40
+text = "SCORE: "
+vertical_alignment = 1
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="score_counter" type="Label" parent="HUD/Control/container/score_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_xrtte")
+theme_override_font_sizes/font_size = 40
+text = "000000"
+vertical_alignment = 1
