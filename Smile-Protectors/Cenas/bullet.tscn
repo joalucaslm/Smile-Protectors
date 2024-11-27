@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://xd2vtp3gd5do"]
 
 [ext_resource type="Script" path="res://Scripts/Bullet.gd" id="1_j4wxo"]
-[ext_resource type="Texture2D" uid="uid://wwng2ikg1li2" path="res://Assets Smile Protectors/projectile.png" id="2_00yje"]
+[ext_resource type="Texture2D" uid="uid://hts2lk6modl0" path="res://Assets Smile Protectors/TiroPastaDente.png" id="2_5m3lw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lkrlx"]
 radius = 20.0
@@ -15,8 +15,9 @@ collision_mask = 3
 script = ExtResource("1_j4wxo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-13.3333, 0)
-texture = ExtResource("2_00yje")
+position = Vector2(-2.2644, -0.397189)
+scale = Vector2(0.0476737, 0.0475709)
+texture = ExtResource("2_5m3lw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_lkrlx")

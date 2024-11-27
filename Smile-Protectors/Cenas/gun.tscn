@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://be0p0h3l1xnrh"]
 
 [ext_resource type="Script" path="res://Scripts/gun.gd" id="1_7idim"]
-[ext_resource type="Texture2D" uid="uid://de41so0uftuuj" path="res://Assets Smile Protectors/pistol.png" id="1_ak32h"]
+[ext_resource type="Texture2D" uid="uid://doatejc3xm71" path="res://Assets Smile Protectors/TuboPastaDente.png" id="2_5e3ne"]
 [ext_resource type="PackedScene" uid="uid://xd2vtp3gd5do" path="res://Cenas/bullet.tscn" id="3_oat2e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t0ti8"]
@@ -17,13 +17,13 @@ shape = SubResource("CircleShape2D_t0ti8")
 [node name="WeaponPivot" type="Marker2D" parent="."]
 
 [node name="pistol" type="Sprite2D" parent="WeaponPivot"]
-position = Vector2(11, 0)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("1_ak32h")
+position = Vector2(14, 4.76837e-07)
+scale = Vector2(0.047561, 0.0496835)
+texture = ExtResource("2_5e3ne")
 
 [node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/pistol"]
 unique_name_in_owner = true
-position = Vector2(28, -12)
+position = Vector2(147.179, -8.58307e-06)
 
 [node name="Bullet" parent="WeaponPivot/pistol/ShootingPoint" instance=ExtResource("3_oat2e")]
 

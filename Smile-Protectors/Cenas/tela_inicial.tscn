@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://84cfx2wu3hbx"]
+
+[ext_resource type="Texture2D" uid="uid://cl3yobc716gtl" path="res://capa1.png" id="1_wh30n"]
+[ext_resource type="FontFile" uid="uid://bmnlj3amdmi2x" path="res://Hi Jack.otf" id="2_7yl0a"]
+
+[node name="TelaInicial" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(576, 324)
+scale = Vector2(1.02396, 1.00619)
+texture = ExtResource("1_wh30n")
+
+[node name="botaoIniciar" type="Button" parent="."]
+offset_left = 451.0
+offset_top = 394.0
+offset_right = 684.0
+offset_bottom = 502.0
+theme_override_colors/font_color = Color(0.878431, 0.698039, 0.0196078, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_7yl0a")
+theme_override_font_sizes/font_size = 62
+text = "INICIAR"
