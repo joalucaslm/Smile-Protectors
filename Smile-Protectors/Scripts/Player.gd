@@ -12,6 +12,7 @@ var health = 100.0
 func _physics_process(_delta: float) -> void:
 	_move()
 	move_and_slide()
+	vencer()
 	
 	const DAMAGE_RATE = 20.0
 	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
@@ -41,3 +42,7 @@ func _move() -> void:
 
 func _die():
 	get_tree().change_scene_to_file("res://Cenas/perdeu.tscn")
+
+func vencer():
+	if Globals.score == 3000:
+		get_tree().change_scene_to_file("res://Cenas/ganhou.tscn")
