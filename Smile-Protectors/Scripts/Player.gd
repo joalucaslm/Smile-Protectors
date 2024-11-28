@@ -20,6 +20,7 @@ func _physics_process(_delta: float) -> void:
 		%ProgressBar.value = health
 		if health <= 0.0:
 			health_depleted.emit()
+			_die()
 	
 func _move() -> void:
 	var _direction: Vector2 = Vector2(
@@ -39,5 +40,4 @@ func _move() -> void:
 	
 
 func _die():
-	if health == 0:
-		get_tree().change_scene_to_file("res://Cenas/perdeu.tscn")
+	get_tree().change_scene_to_file("res://Cenas/perdeu.tscn")
