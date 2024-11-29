@@ -532,13 +532,13 @@ texture = ExtResource("25_2h5tp")
 position = Vector2(-145, -18.5)
 shape = SubResource("RectangleShape2D_wc2yk")
 
-[node name="jogador_1" parent="almoco" instance=ExtResource("25_naea1")]
+[node name="player" parent="almoco" instance=ExtResource("25_naea1")]
 position = Vector2(-96, -28)
 collision_mask = 1
 _move_speed = 100.0
 metadata/_edit_group_ = true
 
-[node name="Camera2D" type="Camera2D" parent="almoco/jogador_1"]
+[node name="Camera2D" type="Camera2D" parent="almoco/player"]
 zoom = Vector2(3.5, 3.5)
 
 [node name="Path2D" type="Path2D" parent="almoco"]

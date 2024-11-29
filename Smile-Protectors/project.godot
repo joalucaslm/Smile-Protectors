@@ -18,6 +18,9 @@ config/icon="res://icon.svg"
 [autoload]
 
 Globals="*res://Scripts/globals.gd"
+BotaoIniciar="*res://Scripts/botaoIniciar.gd"
+ButaoMedio="*res://Scripts/butaoMedio.gd"
+ButaoDificil="*res://Scripts/butaoDificil.gd"
 
 [input]
 

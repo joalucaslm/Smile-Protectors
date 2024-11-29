@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://84cfx2wu3hbx"]
+[gd_scene load_steps=6 format=3 uid="uid://84cfx2wu3hbx"]
 
 [ext_resource type="Texture2D" uid="uid://cl3yobc716gtl" path="res://capa1.png" id="1_wh30n"]
 [ext_resource type="FontFile" uid="uid://bmnlj3amdmi2x" path="res://Hi Jack.otf" id="2_7yl0a"]
 [ext_resource type="Script" path="res://Scripts/botaoIniciar.gd" id="3_yu2vx"]
+[ext_resource type="Script" path="res://Scripts/butaoMedio.gd" id="4_h2jcp"]
+[ext_resource type="Script" path="res://Scripts/butaoDificil.gd" id="5_ftjyr"]
 
 [node name="TelaInicial" type="Node2D"]
 
@@ -13,20 +15,49 @@ position = Vector2(576, 324)
 scale = Vector2(1.02396, 1.00619)
 texture = ExtResource("1_wh30n")
 
-[node name="botaoIniciar" type="Button" parent="."]
-offset_left = 451.0
-offset_top = 394.0
-offset_right = 684.0
-offset_bottom = 502.0
-theme_override_colors/font_color = Color(0.878431, 0.698039, 0.0196078, 1)
+[node name="botaoFacil" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 388.0
+offset_top = 365.0
+offset_right = 743.0
+offset_bottom = 438.0
+theme_override_colors/font_color = Color(0, 0.698039, 0.0196078, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("2_7yl0a")
 theme_override_font_sizes/font_size = 62
-text = "INICIAR"
+text = "Nivel Facil"
 script = ExtResource("3_yu2vx")
+
+[node name="butaoMedio" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 378.0
+offset_top = 443.0
+offset_right = 753.0
+offset_bottom = 516.0
+theme_override_colors/font_color = Color(0.878431, 0.698039, 0.0196078, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_7yl0a")
+theme_override_font_sizes/font_size = 62
+text = "Nivel Medio"
+script = ExtResource("4_h2jcp")
+
+[node name="butaoDificil" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 377.0
+offset_top = 524.0
+offset_right = 764.0
+offset_bottom = 597.0
+theme_override_colors/font_color = Color(0.878431, 0, 0.0196078, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_7yl0a")
+theme_override_font_sizes/font_size = 62
+text = "Nivel Dificil"
+script = ExtResource("5_ftjyr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(574, 322)
 
-[connection signal="pressed" from="botaoIniciar" to="botaoIniciar" method="_on_pressed"]
+[connection signal="pressed" from="botaoFacil" to="botaoFacil" method="_on_pressed"]
+[connection signal="pressed" from="butaoMedio" to="butaoMedio" method="_on_pressed"]
+[connection signal="pressed" from="butaoDificil" to="butaoDificil" method="_on_pressed"]

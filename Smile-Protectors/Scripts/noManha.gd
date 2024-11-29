@@ -11,6 +11,6 @@ func spawn_mob():
 	add_child(new_mob)
 
 
-
 func _on_timer_timeout():
 	spawn_mob()
+
