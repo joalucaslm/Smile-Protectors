@@ -724,6 +724,7 @@ position = Vector2(57, 56)
 rotation = -1.55325
 
 [node name="Timer" type="Timer" parent="cafeDaManha"]
+wait_time = 0.9
 autostart = true
 
 [node name="HUD" type="CanvasLayer" parent="cafeDaManha"]
